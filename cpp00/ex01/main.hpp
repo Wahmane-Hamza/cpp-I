@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:04:05 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/16 16:51:29 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/17 08:53:45 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class Contact
         void		displayField( std::string field );
         std::string	formatString( std::string str );
         void		displayContact( void );
-
 }; 
 
 class PhoneBook 

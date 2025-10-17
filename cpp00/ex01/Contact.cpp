@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:48:03 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/16 18:51:44 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/17 09:09:32 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ std::string	Contact::formatString(std::string str)
 void	Contact::displayField(std::string field)
 {
 	std::cout << '|';
-	std::cout << std::setfill(' ') << std::setw(10) << formatString(field);
+	std::cout << std::setw(10) << formatString(field);
 }
 void Contact::displayColumn(int id)
 {
-	std::cout << std::setfill(' ') << std::setw(10) << id;
+	std::cout << std::setw(10) << id;
 	displayField(first_name);
 	displayField(second_name);
 	displayField(nick_name);
@@ -54,7 +54,6 @@ Contact::Contact(void)
 	this->darkest_secret = "";
 }
 
-// Parameterized constructor
 Contact::Contact(std::string firstName, std::string lastName, std::string nickName,
 			std::string phoneNumber, std::string darkestSecret)
 {
@@ -64,4 +63,3 @@ Contact::Contact(std::string firstName, std::string lastName, std::string nickNa
 	this->phone = phoneNumber;
 	this->darkest_secret = darkestSecret;
 }
-

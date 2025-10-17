@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:49:21 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/16 16:49:45 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/17 09:01:21 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,10 @@ std::string	PhoneBook::input(std::string msg)
 		if (!getline(std::cin, var))
 		{
 			if (std::cin.eof())
+			{
+				std::cout << std::endl;
 				exit(EXIT_FAILURE);
+			}
 		}
 		if (var.empty())
 			continue ;
@@ -79,15 +82,15 @@ std::string	PhoneBook::input(std::string msg)
 
 bool	PhoneBook::add(void)
 {
-	std::string first_name = this->input("Type your First Name: ");
+	std::string first_name = this->input("First Name: ");
 	if (first_name.empty()) return (false);
-	std::string second_name = this->input("Type your Last Name: ");
+	std::string second_name = this->input("Last Name: ");
 	if (second_name.empty()) return (false);
-	std::string nick_name = this->input("Type your Nick Name: ");
+	std::string nick_name = this->input("Nick Name: ");
 	if (nick_name.empty()) return (false);
-	std::string phone = this->input("Type your Phone Name: ");
+	std::string phone = this->input("Phone Number: ");
 	if (phone.empty()) return (false);
-	std::string darkest_secret = this->input("Type your Darkest Secret: ");
+	std::string darkest_secret = this->input("Darkest Secret: ");
 	if (darkest_secret.empty()) return (false);
 	Contact	newContact(first_name, second_name, nick_name, phone, darkest_secret);
 
