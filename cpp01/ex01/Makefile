@@ -4,7 +4,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 INCLUDES = -IZombie.hpp
 
-SRCS =	Zombie.cpp main.cpp randomChump.cpp newZombie.cpp
+SRCS =	Zombie.cpp main.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

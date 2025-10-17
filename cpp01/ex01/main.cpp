@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:23:40 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:44 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/17 18:19:11 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name )
+int main()
 {
-    Zombie* Z = new Zombie(name);
-    return (Z);
+    int i;
+    Zombie* z = zombieHorde(5, "hamza");
+
+    i = 0;
+    while (i < 5)
+    {
+        z[i].announce();
+        i++;
+    }
+    delete[] z;
+    return (0);
 }

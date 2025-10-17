@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:23:40 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:44 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/17 21:06:08 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/17 22:22:04 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include "HumanB.hpp"
 
-Zombie* newZombie( std::string name )
+class HumanA
 {
-    Zombie* Z = new Zombie(name);
-    return (Z);
-}
+private:
+    Weapon& _Weapon;
+    std::string _name;
+public:
+    HumanA(std::string name, Weapon& weapon);
+    ~HumanA();
+    void    attack();
+    const std::string& getName() const;
+};

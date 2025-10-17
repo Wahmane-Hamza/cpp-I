@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:23:40 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:44 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/17 21:13:01 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+# include <iostream>
 
-Zombie* newZombie( std::string name )
+int main()
 {
-    Zombie* Z = new Zombie(name);
-    return (Z);
+    std::string str = "HI THIS IS BRAIN";
+    std::string *stringPTR = &str;
+    std::string &stringREF = str;
+
+    std::cout << &str << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
+
+    std::cout << str << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
+
+    return (0);
 }

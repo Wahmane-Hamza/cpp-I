@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:23:40 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:44 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/17 16:23:47 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/17 18:12:47 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie* newZombie( std::string name )
+# include <iostream>
+
+
+class Zombie
 {
-    Zombie* Z = new Zombie(name);
-    return (Z);
-}
+    private:
+    std::string    _name;
+
+    public:
+    Zombie(void);
+    Zombie(std::string name);
+    ~Zombie();
+    void announce( void );
+    void name(std::string name);
+};
+
+Zombie* zombieHorde( int N, std::string name );

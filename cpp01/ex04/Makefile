@@ -1,10 +1,10 @@
-NAME = zombie
+NAME = violence
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INCLUDES = -IZombie.hpp
+INCLUDES = -I ./
 
-SRCS =	Zombie.cpp main.cpp randomChump.cpp newZombie.cpp
+SRCS =	main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp Weapon.hpp HumanA.hpp HumanB.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
