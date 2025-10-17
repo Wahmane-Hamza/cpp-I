@@ -1,0 +1,26 @@
+NAME = the_job_of_your_dreams
+CPP = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+RM = rm -f
+INCLUDES = -IZombie.hpp
+
+SRCS =	Zombie.cpp main.cpp randomChump.cpp newZombie.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.cpp Zombie.hpp
+	$(CPP) $(CPPFLAGS) -c $< -o $@ $(INCLUDES)
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
