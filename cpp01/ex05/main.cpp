@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 21:06:08 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/18 17:19:10 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/18 17:24:02 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 
-#include <iostream>
-#include "HumanB.hpp"
 
-class HumanA
+int main()
 {
-private:
-    Weapon& _Weapon;
-    std::string _name;
-public:
-    HumanA(std::string name, Weapon& weapon);
-    ~HumanA();
-    void    attack();
-    const std::string& getName() const;
-};
+    return 0;
+}

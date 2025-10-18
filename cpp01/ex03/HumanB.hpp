@@ -6,9 +6,11 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:10:29 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 22:18:32 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/18 17:19:14 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <iostream>
 #include "Weapon.hpp"

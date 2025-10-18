@@ -1,9 +1,10 @@
-NAME = losers
+NAME = harl
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
+INCLUDES = -IHarl.hpp
 
-SRCS =	main.cpp
+SRCS =	main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -11,8 +12,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+%.o: %.cpp Harl.hpp
+	$(CPP) $(CPPFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
 	$(RM) $(OBJS)
