@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/17 18:19:11 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/19 12:28:55 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int main()
 {
     int i;
-    Zombie* z = zombieHorde(5, "hamza");
+    Zombie* z = zombieHorde(50, "hamza");
 
     i = 0;
-    while (i < 5)
+    while (i < 50)
     {
         z[i].announce();
         i++;
