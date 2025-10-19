@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/19 14:05:14 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:33:17 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int main(int ac, char **av)
                     line = line + '\n';
                 while ( (pos = line.find(s1, pos)) != std::string::npos)
                 {
-                    std::cout << pos << std::endl;
                     line = line.substr(0, pos) + s2 + line.substr(pos + s1.length());
                     pos = pos + s2.length();
                 }

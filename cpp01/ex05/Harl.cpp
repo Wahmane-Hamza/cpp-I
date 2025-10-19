@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 17:18:30 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/19 11:43:32 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:43:11 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,5 @@ void Harl::complain( std::string level )
         }
         i++;
     }
-    std::cout << " UNKNOWN LEVEL" << std::endl;
+    std::cout << "UNKNOWN LEVEL" << std::endl;
 }
