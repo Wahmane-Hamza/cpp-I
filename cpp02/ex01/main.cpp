@@ -6,25 +6,29 @@
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/21 12:07:05 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:47:08 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-int main()
+int main( void )
 {
-    int i;
+    Fixed a;
+    Fixed const b( 10 );
+    Fixed const c( 42.42f );
+    Fixed const d( b );
 
-    if (Zombie* z = zombieHorde(5, "hamza"))
-    {
-        i = 0;
-        while (i < 50)
-        {
-            z[i].announce();
-            i++;
-        }
-        delete[] z;
-    }
-    return (0);
+    a = Fixed( 1234.4321f );
+
+    std::cout << "a is " << a << std::endl;
+    std::cout << "b is " << b << std::endl;
+    std::cout << "c is " << c << std::endl;
+    std::cout << "d is " << d << std::endl;
+
+    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+    return 0;
 }

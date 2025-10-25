@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 17:58:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/10/21 12:07:05 by hwahmane         ###   ########.fr       */
+/*   Created: 2025/10/25 14:30:09 by hwahmane          #+#    #+#             */
+/*   Updated: 2025/10/25 14:59:35 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int main()
+#include <iostream>
+
+class Fixed
 {
-    int i;
-
-    if (Zombie* z = zombieHorde(5, "hamza"))
-    {
-        i = 0;
-        while (i < 50)
-        {
-            z[i].announce();
-            i++;
-        }
-        delete[] z;
-    }
-    return (0);
-}
+    private:
+        int _fixedPoint;
+        static int const _fractionalBits = 8;
+    public:
+        Fixed();
+        Fixed(const Fixed &other);
+        Fixed &operator = (const Fixed &other);
+        ~Fixed();
+        int getRawBits( void ) const;
+        void setRawBits( int const raw );
+};
