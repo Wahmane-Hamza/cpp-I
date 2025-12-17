@@ -52,12 +52,12 @@
     {
         if (this->_hitpoints <= 0)
         {
-            std::cout << "can't attack because i'm dead" << std::endl;
+            std::cout << "ScavTrap can't attack because i'm dead" << std::endl;
             return;
         }
         if (this->_energypoints <= 0)
         {
-            std::cout << "can't attack because no energy left" << std::endl;
+            std::cout << "ScavTrap can't attack because no energy left" << std::endl;
             return;
         }
         std::cout << "ScavTrap " << this->_name <<  " attacks " << target <<", causing " << this->_attackpoints << " points of damage!" << std::endl;

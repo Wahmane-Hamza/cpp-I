@@ -61,6 +61,7 @@ void ClapTrap::attack(const std::string& target)
     std::cout << "ClapTrap " << this->_name <<  " attacks " << target <<", causing " << this->_attackpoints << " points of damage!" << std::endl;
     this->_energypoints--;
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
     if (this->_hitpoints <= 0)
@@ -74,6 +75,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     else
         this->_hitpoints = 0;
 }
+
 void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_hitpoints <= 0)
@@ -88,6 +90,5 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     std::cout << "ClapTrap " << this->_name <<  " repaired " << amount << " points of hit!" << std::endl;
     this->_hitpoints += amount;
-    // TODO flsafa dial zid for 10
     this->_energypoints--;
 }

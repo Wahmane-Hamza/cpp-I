@@ -88,6 +88,5 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     std::cout << "ClapTrap " << this->_name <<  " repaired " << amount << " points of hit!" << std::endl;
     this->_hitpoints += amount;
-    // TODO flsafa dial zid for 10
     this->_energypoints--;
 }

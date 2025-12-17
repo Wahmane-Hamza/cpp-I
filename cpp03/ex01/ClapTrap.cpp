@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hitpoints(10), _energypoints
 
 ClapTrap&  ClapTrap::operator = (const ClapTrap &copy)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ClapTrap Copy assignment operator called" << std::endl;
     if (this != &copy)
     {
         this->_name = copy._name;
@@ -42,7 +42,7 @@ ClapTrap&  ClapTrap::operator = (const ClapTrap &copy)
 
 ClapTrap::ClapTrap(const ClapTrap &copy): _name(copy._name), _hitpoints(copy._hitpoints), _energypoints(copy._energypoints), _attackpoints(copy._attackpoints)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap Copy constructor called" << std::endl;
     *this = copy;
 }
 
@@ -50,12 +50,12 @@ void ClapTrap::attack(const std::string& target)
 {
     if (this->_hitpoints <= 0)
     {
-        std::cout << "can't attack because i'm dead" << std::endl;
+        std::cout << "ClapTrap can't attack because i'm dead" << std::endl;
         return;
     }
     if (this->_energypoints <= 0)
     {
-        std::cout << "can't attack because no energy left" << std::endl;
+        std::cout << "ClapTrap can't attack because no energy left" << std::endl;
         return;
     }
     std::cout << "ClapTrap " << this->_name <<  " attacks " << target <<", causing " << this->_attackpoints << " points of damage!" << std::endl;
@@ -65,7 +65,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
     if (this->_hitpoints <= 0)
     {
-        std::cout << "can't take damage because i'm dead" << std::endl;
+        std::cout << "ClapTrap can't take damage because i'm dead" << std::endl;
         return;
     }
     std::cout << "ClapTrap " << this->_name <<  " take " << amount << " points of damage!" << std::endl;
@@ -78,16 +78,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_hitpoints <= 0)
     {
-        std::cout << "can't repaired because i'm dead" << std::endl;
+        std::cout << "ClapTrap can't repaired because i'm dead" << std::endl;
         return;
     }
     if (this->_energypoints <= 0)
     {
-        std::cout << "can't repaired because no energy left" << std::endl;
+        std::cout << "ClapTrap can't repaired because no energy left" << std::endl;
         return;
     }
     std::cout << "ClapTrap " << this->_name <<  " repaired " << amount << " points of hit!" << std::endl;
     this->_hitpoints += amount;
-    // TODO flsafa dial zid for 10
     this->_energypoints--;
 }
