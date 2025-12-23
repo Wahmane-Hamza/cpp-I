@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   WrongAAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 15:38:42 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/12/23 15:56:52 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/12/23 18:09:45 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "WrongAAnimal.hpp"
 
-#include "WrongAnimal.hpp"
-
-WrongAnimal::WrongAnimal(void)
+WrongAAnimal::WrongAAnimal(void)
 {
-    std::cout << "WrongAnimal Default constructor called" << std::endl;
+    std::cout << "WrongAAnimal Default constructor called" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal(void)
+WrongAAnimal::~WrongAAnimal(void)
 {
-    std::cout << "WrongAnimal Destructor called" <<  std::endl;
+    std::cout << "WrongAAnimal Destructor called" <<  std::endl;
 }
 
-WrongAnimal&  WrongAnimal::operator = (const WrongAnimal &copy)
+WrongAAnimal&  WrongAAnimal::operator = (const WrongAAnimal &copy)
 {
-    std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
+    std::cout << "WrongAAnimal Copy assignment operator called" << std::endl;
     if (this != &copy)
     {
         this->type = copy.type;
@@ -33,19 +32,19 @@ WrongAnimal&  WrongAnimal::operator = (const WrongAnimal &copy)
     return (*this);
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copy)
+WrongAAnimal::WrongAAnimal(const WrongAAnimal &copy)
 {
-    std::cout << "WrongAnimal Copy constructor called" << std::endl;
+    std::cout << "WrongAAnimal Copy constructor called" << std::endl;
     *this = copy;
 }
 
-const std::string	WrongAnimal::getType() const
+const std::string	WrongAAnimal::getType() const
 {
     return (this->type);
 }
 
-void WrongAnimal::makeSound() const
+void WrongAAnimal::makeSound() const
 {
-    std::cout << "WrongAnimal sound" << std::endl;
+    std::cout << "WrongAAnimal sound" << std::endl;
 }
 

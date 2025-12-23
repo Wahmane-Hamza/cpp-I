@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 15:03:27 by hwahmane          #+#    #+#             */
-/*   Updated: 2025/12/23 15:57:57 by hwahmane         ###   ########.fr       */
+/*   Updated: 2025/12/23 18:31:42 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 Cat::Cat(void): Animal()
 {
     this->type = "Cat";
+    this->_brain = new Brain();
     std::cout << "Cat Default constructor called" << std::endl;
 }
 
 Cat::~Cat(void)
 {
+    delete this->_brain;
     std::cout << "Cat Destructor called" <<  std::endl;
 }
 
@@ -29,17 +31,29 @@ Cat&  Cat::operator = (const Cat &copy)
     if (this != &copy)
     {
         this->type = copy.type;
+        delete this->_brain;
+        this->_brain = new Brain(*(copy._brain));
     }
     return (*this);
 }
 
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy): Animal(copy)
 {
     std::cout << "Cat Copy constructor called" << std::endl;
-    *this = copy;
+    this->_brain = new Brain(*(copy._brain));
 }
 
 void Cat::makeSound() const
 {
     std::cout << "Meow Meow" << std::endl;
+}
+
+const std::string	Cat::getIdea(int idx) const
+{
+	return (this->_brain->getIdea(idx));
+}
+
+void	Cat::setIdea(int idx, std::string& idea)
+{
+	this->_brain->setIdea(idx, idea);
 }

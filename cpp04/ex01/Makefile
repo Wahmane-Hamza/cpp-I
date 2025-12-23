@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = Brain
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
@@ -6,7 +6,7 @@ SRC = ./src
 INCL = ./include
 INCLUDES = -I$(INCL)
 
-SRCS =	$(SRC)/Animal.cpp $(SRC)/Cat.cpp $(SRC)/Dog.cpp $(SRC)/WrongCat.cpp $(SRC)/WrongAnimal.cpp $(SRC)/main.cpp
+SRCS =	$(SRC)/Animal.cpp $(SRC)/Cat.cpp $(SRC)/Dog.cpp $(SRC)/WrongCat.cpp $(SRC)/WrongAnimal.cpp $(SRC)/main.cpp $(SRC)/Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -14,7 +14,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp $(INCL)/Animal.hpp $(INCL)/Cat.hpp $(INCL)/Dog.hpp $(INCL)/WrongCat.hpp $(INCL)/WrongAnimal.hpp
+%.o: %.cpp $(INCL)/Animal.hpp $(INCL)/Cat.hpp $(INCL)/Dog.hpp $(INCL)/WrongCat.hpp $(INCL)/WrongAnimal.hpp $(INCL)/Brain.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
