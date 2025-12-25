@@ -13,7 +13,7 @@
 #pragma once
 
 #include <iostream>
-#include "WrongAAnimal.hpp"
+#include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAAnimal
 {

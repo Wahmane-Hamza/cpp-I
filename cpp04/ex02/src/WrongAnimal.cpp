@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAAnimal.hpp"
+#include "WrongAnimal.hpp"
 
 WrongAAnimal::WrongAAnimal(void)
 {
